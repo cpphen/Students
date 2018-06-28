@@ -24,7 +24,7 @@ int TollBooth::getNumStudents()
 
 int TollBooth::getNumDeadBeats()
 {
-	return m_nCourseCount;
+	return m_nDeadbeatStus;
 }
 
 double TollBooth::calcTollCollected()
@@ -34,15 +34,15 @@ double TollBooth::calcTollCollected()
 
 void TollBooth::setInputs()
 {
-	//setCourseData();
-
+	setCourseData();
+	/*bool flag;
 	do
 	{
-		setCourseData();
-	} while (!setCourseData());
+		flag = setCourseData();
+	} while (flag == false);*/
 }
 
-bool TollBooth::setCourseData()
+void TollBooth::setCourseData()
 {
 	int numStudents;
 
@@ -54,12 +54,13 @@ bool TollBooth::setCourseData()
 	if (m_nPayingStus > numStudents)
 	{
 		cout << "*** Invalid input: more paying than entered! ***" << endl;
-		return false;
+		setCourseData();
+		//return false;
 	}
 	else
 	{
 		m_nDeadbeatStus = numStudents - m_nPayingStus;
 		m_nCourseCount++;
 	}
-	return true;
+	//return true;
 }

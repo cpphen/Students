@@ -9,7 +9,7 @@ private:
 	int m_nPayingStus;
 	int m_nDeadbeatStus;
 	static int m_nCourseCount;
-	bool setCourseData();
+	void setCourseData();
 public:
 	TollBooth();
 	static int getCourseCount();
