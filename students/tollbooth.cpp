@@ -35,11 +35,6 @@ double TollBooth::calcTollCollected()
 void TollBooth::setInputs()
 {
 	setCourseData();
-	/*bool flag;
-	do
-	{
-		flag = setCourseData();
-	} while (flag == false);*/
 }
 
 void TollBooth::setCourseData()
@@ -55,12 +50,10 @@ void TollBooth::setCourseData()
 	{
 		cout << "*** Invalid input: more paying than entered! ***" << endl;
 		setCourseData();
-		//return false;
 	}
 	else
 	{
 		m_nDeadbeatStus = numStudents - m_nPayingStus;
 		m_nCourseCount++;
 	}
-	//return true;
 }
