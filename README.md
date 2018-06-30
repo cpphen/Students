@@ -6,6 +6,7 @@ For windows, download Visual Studio 2017 and make sure to install C++ tools duri
 
 For Mac, follow these instructions:
   - https://code.visualstudio.com/docs/setup/mac
+
 For Linux:
   - https://code.visualstudio.com/docs/setup/linux
   
